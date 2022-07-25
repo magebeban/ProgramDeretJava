@@ -31,7 +31,7 @@ public class Deret {
         }
     }
 
-    public static void printGeometri(int n, int b){
+    public static void printGeometri(Integer n, Integer b){
         Integer a = 1;
         System.out.println("Deret Aritmatika : \n");
 
@@ -41,7 +41,7 @@ public class Deret {
         }
     }
 
-    public static void printFactorial(int n){
+    public static void printFactorial(Integer n){
         Integer total = 1;
         System.out.println("Faktorial dari" + n +" : \n");
         for (Integer i = n ; i >= 1 ; i--){
