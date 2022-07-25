@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Deret {
+    public static void main(String[] args) {
+        String ulang = "y";
+        while (ulang.equalsIgnoreCase("y")) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Belajar Deret Aritmatika, Geometri dan mehitung Faktorial\n");
+            System.out.print("Masukkan banyak angka yang mau dicetak [2..10]    : ");
+            Integer n = sc.nextInt();
+            System.out.print("Masukkan beda masing-masing angka [2..9]   : ");
+            Integer b = sc.nextInt();
+            printArithmatic(n, b);
+            printGeometri(n, b);
+            printFactorial(n);
+            System.out.print("Apakah anda ingin mengulang [y/t] : ? ");
+            Scanner x = new Scanner(System.in);
+            ulang = x.nextLine();
+        }
+        System.out.println("\n\nBye......");
+
+    }
+
+    public static void printArithmatic(Integer n, Integer b){
+        Integer a = 1;
+        System.out.println("Deret Aritmatika : \n");
+
+        for (Integer i = 1 ; i < n ; i++){
+            System.out.println(a+" ");
+            a += b;
+        }
+    }
+
+    public static void printGeometri(int n, int b){
+        Integer a = 1;
+        System.out.println("Deret Aritmatika : \n");
+
+        for (Integer i = 1 ; i < n ; i++){
+            System.out.println(a+" ");
+            a += b;
+        }
+    }
+
+    public static void printFactorial(int n){
+        Integer total = 1;
+        System.out.println("Faktorial dari" + n +" : \n");
+        for (Integer i = n ; i >= 1 ; i--){
+            System.out.println(i+" * ");
+            total = total * i;
+        }
+        System.out.println(" = "+ total);
+    }
+
+}
